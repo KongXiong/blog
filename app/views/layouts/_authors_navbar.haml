@@ -1,0 +1,10 @@
+%nav.navbar.navbar-light.bg-faded
+  %ul.nav.navbar-nav
+    - if 
+      %li
+        = link_to "New Post", new_authors_post_path
+      %li
+        = link_to "Logout", destroy_author_session_path, method: :delete
+    - else
+      %li
+        = link_to "Login", new_author_session
